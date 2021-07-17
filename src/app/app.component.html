@@ -9,11 +9,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <h2>Ajouter un utilisateur</h2>
+        <h2>Ajouter un participant</h2>
         <app-new-user-form></app-new-user-form>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <h2>Mes Users</h2>
+        <h2>Les inscrits</h2>
         <p>Mis à jour : {{ lastUpdate | async | date: 'short'}}</p>      <ul class="list-group">
           <app-user-list *ngFor="let user of users | slice:1" [userFirstname]="user.firstname" [userLastname]="user.lastname" [userBirthdate]="user.birthdate" [userAmount]="user.amount" [userAdress]="user.adress" [userZipcode]="user.zipcode" [userCity]="user.city"></app-user-list>
         </ul>
