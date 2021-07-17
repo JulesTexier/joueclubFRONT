@@ -6,7 +6,6 @@ import { Injectable } from "@angular/core";
 export class UserService {
 
   users = [{}];
-
   constructor(private httpClient: HttpClient){}
 
   addUser(firstname: string, lastname:string, birthdate: string, amount: number, adress: string, zipcode: number, city: string) {
@@ -19,6 +18,7 @@ export class UserService {
       zipcode: 0,
       city: ''
     };
+
     userObject.firstname = firstname;
     userObject.lastname = lastname;
     userObject.birthdate = birthdate;
@@ -28,6 +28,7 @@ export class UserService {
     userObject.city = city;
     this.users.push(userObject)
     console.log(this.users)
+
   };
 
   saveUserToServer(firstname: string, lastname:string, birthdate: string, amount: number, adress: string, zipcode: number, city: string) {

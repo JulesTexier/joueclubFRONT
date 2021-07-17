@@ -11,19 +11,18 @@ import { UserService } from './services/user.service';
 
 export class AppComponent implements OnInit {
   title = 'Mon formulaire';
-  
-  lastUpdate = 
-  new Promise<Date>((resolve, reject) => {
-    const date = new Date();
-    setTimeout(
-      () => {
-        resolve(date);
-      }, 2000
-      );
-    });
+  users: any[] | undefined;
+
+  lastUpdate = new Promise<Date>((resolve, reject) => {const date = new Date();
+
+  setTimeout(
+    () => {
+      resolve(date);
+    }, 2000
+    );
+  });
     
-    users: any[] | undefined;
-    
+
   constructor(private userService: UserService) {
   }
 
