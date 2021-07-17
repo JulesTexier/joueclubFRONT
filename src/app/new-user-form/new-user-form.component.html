@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-sm-8 ">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="firstname">
+          Prénom
+        </label>
+        <input type="text" id="firstname" class="form-control" name="firstname" ngModel required maxlength="40">
+      </div>
+      <div class="form-group">
+        <label for="lastname">
+          Nom
+        </label>
+        <input type="text" id="lastname" class="form-control" name="lastname" ngModel required maxlength="40">
+      </div>
+      <div class="form-group">
+        <label for="birthdate">
+          Date de naissance
+        </label>
+        <input type="date" data-date-format="DD MMMM YYYY" id="bithdate" class="form-control" name="birthdate" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="birthdate">
+          Montant
+        </label>
+        <input type="number" id="amount" class="form-control" name="amount" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="adress">
+          Adresse
+        </label>
+        <input type="string" id="adress" class="form-control" name="adress" ngModel required maxlength="150">
+      </div>
+      <div class="form-group">
+        <label for="zipcode">
+          Code Postal
+        </label>
+        <input type="number" id="zipcode" class="form-control" name="zipcode" ngModel required maxlength="5">
+      </div>
+      <div class="form-group">
+        <label for="city">
+          Ville
+        </label>
+        <input type="string" id="city" class="form-control" name="city" ngModel required maxlength="75">
+      </div>
+      <button class="btn btn-danger" [disabled]="f.invalid" type="submit">Enregistrer</button>
+    </form>
+  </div>
+</div>

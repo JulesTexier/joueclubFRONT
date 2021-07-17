@@ -1,0 +1,13 @@
+<li class="list-group-item d-flex" >
+  <div class="card">
+    <h4> <b>Prénom : </b> {{ userFirstname }}</h4>
+    <h4> <b>Nom </b> :  {{ userLastname }} </h4>
+  </div>
+  <div class="card">
+    <h4> <b>Jour de naissance : </b> {{ userBirthdate | date: 'd/M/yyyy'}}</h4>
+    <h4> <b>Montant </b> :  {{ userAmount }} €</h4>
+    <h4> <b>Adresse : </b> {{ userAdress }}</h4>
+    <h4> <b>Code Postal </b> :  {{ userZipcode }} </h4>
+    <h4> <b>Ville </b> :  {{ userCity }} </h4>
+  </div>
+</li>
